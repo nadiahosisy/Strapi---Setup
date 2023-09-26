@@ -5,7 +5,20 @@ import sublinks from "../data";
 
 const Sidebar = () => {
   const { isSidebar, closeSidebar } = useGlobalContext();
-  return <h2>Sidebar</h2>;
+  return (
+    <aside className="sidebar">
+      <div className="sidebar-container">
+        <button className="close-btn">
+          <FaTimes />
+        </button>
+        <div className="sidebar-links">
+          {sublinks.map((item) => {
+            console.log(item);
+          })}
+        </div>
+      </div>
+    </aside>
+  );
 };
 
 export default Sidebar;
