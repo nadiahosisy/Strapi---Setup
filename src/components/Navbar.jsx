@@ -6,7 +6,9 @@ import NavLinks from "./NavLinks";
 const Navbar = () => {
   const { openSidebar, setPageId } = useGlobalContext();
   const handleSubmenu = (e) => {
-    setPageId(null);
+    if (!e.target.classList.contains("nav-link")) {
+      setPageId(null);
+    }
   };
   return (
     <nav onMouseOver={handleSubmenu}>
