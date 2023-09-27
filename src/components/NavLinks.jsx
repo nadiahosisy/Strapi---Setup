@@ -1,5 +1,6 @@
 import { useGlobalContext } from "../context/Context";
 import sublinks from "../data";
+
 const NavLinks = () => {
   const { setPageId } = useGlobalContext();
   return (
