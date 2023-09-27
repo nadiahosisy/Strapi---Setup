@@ -4,9 +4,12 @@ import { useGlobalContext } from "../context/Context";
 import NavLinks from "./NavLinks";
 
 const Navbar = () => {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar, setPageId } = useGlobalContext();
+  const handleSubmenu = (e) => {
+    setPageId(null);
+  };
   return (
-    <nav>
+    <nav onMouseOver={handleSubmenu}>
       <div className="nav-canter">
         <h3 className="logo">strapi</h3>
         <button className="toggle-btn" onClick={openSidebar}>
