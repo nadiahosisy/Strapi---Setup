@@ -298,11 +298,13 @@ nav {
 .toggle-btn:hover {
   transform: scale(1.05);
 }
+
 /* 
 ============= 
 Hero
 =============== 
 */
+
 .hero-container {
   min-height: calc(100vh - 5rem);
   display: grid;
